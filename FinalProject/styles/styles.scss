@@ -1,0 +1,200 @@
+$dark-color: rgb(75, 0, 130);
+$darkish-color: brown;
+$highlight-color: rgb(220, 20, 60);
+$light-color: tomato;
+$background-color: rgb(255, 215, 0);
+
+@mixin rounded {
+    border-radius: 2em;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', sans-serif;
+    overflow: hidden;
+    color: $dark-color;
+}
+#wrapper{
+    background-color: $background-color;
+    height: 100vh;
+    width: 100vw;
+    header{
+        width: 100%;
+        height: fit-content;
+        padding: 1em 0;
+        background-color: $light-color;
+        border-bottom: 2px solid $dark-color;
+        span{
+            color: $dark-color;
+            font-size: 2.5rem;
+            margin: 1rem;
+            font-weight: bold;
+        }
+    }
+    
+    #main-container{
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        #player-container{
+            @include rounded;
+            width: 40vw;
+            margin: 2em;
+            padding: 1em;
+            text-align: center;
+            background-color: $light-color;
+            border: 15px solid $light-color;
+            z-index: 2;
+            #player-name{
+                font-size: 3rem;
+                text-decoration: underline;
+            }
+            #p-dice-row{
+                display: flex;
+                justify-content: center;
+                #p-die-1{
+                    text-align: center;
+                    img{
+                        height: 10em;
+                        width: 10em;
+                        margin: 1em;
+                        border: 4px solid $dark-color;
+                        @include rounded;
+                    }
+                    div{
+                        font-size: 3rem;
+                    }
+                }
+                #p-die-2{
+                    text-align: center;
+                    img{
+                        height: 10em;
+                        width: 10em;
+                        margin: 1em;
+                        border: 4px solid $dark-color;
+                        @include rounded;
+                    }
+                    div{
+                        font-size: 3rem;
+                    }
+                }
+            }
+            #p-this-score-cont{
+                margin: 1em 0 0 2em;
+                text-align: left;
+                font-size: 2rem;
+                #p-this-score{
+                    font-size: 2rem;
+                }
+            }
+            #p-total-score-cont{
+                margin: 1em 0 0 2em;
+                text-align: left;
+                font-size: 2rem;
+                #p-total-score{
+                    text-decoration: underline;
+                    font-size: 2rem;
+                }
+            }
+        }
+        
+        
+        #comp-container{
+            @include rounded;
+            margin: 2em;
+            padding: 1em;
+            width: 40vw;
+            text-align: center;
+            background-color: $light-color;
+            border: 15px solid $light-color;
+            z-index: 2;
+            #comp-name{
+                font-size: 3rem;
+                text-decoration: underline;
+            }
+            #c-dice-row{
+                display: flex;
+                justify-content: center;
+                
+                #c-die-1{
+                    text-align: center;
+                    img{
+                        height: 10em;
+                        width: 10em;
+                        margin: 1em;
+                        border: 4px solid $dark-color;
+                        @include rounded;
+                    }
+                    div{
+                        font-size: 3rem;
+                    }
+                }
+                #c-die-2{
+                    text-align: center;
+                    img{
+                        height: 10em;
+                        width: 10em;
+                        margin: 1em;
+                        border: 4px solid $dark-color;
+                        @include rounded;
+                    }
+                    div{
+                        font-size: 3rem;
+                    }
+                }
+            }
+            #c-this-score-cont{
+                margin: 1em 0 0 2em;
+                text-align: left;
+                font-size: 2rem;
+                #c-this-score{
+                    font-size: 2rem;
+                }
+            }
+            #c-total-score-cont{
+                margin: 1em 0 0 2em;
+                text-align: left;
+                font-size: 2rem;
+                #c-total-score{
+                    font-size: 2rem;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+#button-container{
+    display: flex;
+    justify-content: center;
+    button{
+        margin: auto 1em;
+        color:$background-color;
+        font-size: 2rem;
+        display: none;
+    }
+    button:not(:disabled){
+        background-color: $darkish-color;
+        height: 3em;
+        width: 10em;
+        display: block;
+    }
+}
+#result-container{
+    display: flex;
+    justify-content: center;
+    #result{
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 1em;
+        text-decoration: underline;
+    }
+}
+
+.winner{
+    border: 15px solid $highlight-color !important;
+}
+.double {
+    text-decoration: underline;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header><span> Comp2132 Final Project</span></header>
+        <div id="main-container">
+            <div id="player-container">
+                <h2 id="player-name">Player</h2>
+                <div id="p-dice-row">
+                    <div id="p-die-1">
+                        <img src="./assets/die-1.png" alt="" id="p-die-1-img">
+                        <div id="p-value-1">1</div>
+                    </div>
+                    <div id="p-die-2">
+                        <img src="./assets/die-1.png" alt="" id="p-die-2-img">
+                        <div id="p-value-2">1</div>
+                    </div>
+                </div>
+                <div id="p-this-score-cont">This Round: <span id="p-this-score">0</span></div>
+                <div id="p-total-score-cont">Total Score: <span id="p-total-score">0</span></div>
+            </div>
+            <div id="comp-container">
+                <h2 id="comp-name">Computer</h2>
+                <div id="c-dice-row">
+                    <div id="c-die-1">
+                        <img src="./assets/die-1.png" alt="" id="c-die-1-img">
+                        <div id="c-value-1">1</div>
+                    </div>
+                    <div id="c-die-2">
+                        <img src="./assets/die-1.png" alt="" id="c-die-2-img">
+                        <div id="c-value-2">1</div>
+                    </div>
+                </div>
+                <div id="c-this-score-cont">This Round: <span id="c-this-score">0</span></div>
+                <div id="c-total-score-cont">Total Score: <span id="c-total-score">0</span></div>
+            </div>
+        </div>
+        <div id="button-container">
+            <button onclick=rollDice() id="roll">Roll!</button>
+            <button onclick=reset() id="play-again" disabled>Play Again</button>
+        </div>
+        <div id="result-container"><span id="result"></span></div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
